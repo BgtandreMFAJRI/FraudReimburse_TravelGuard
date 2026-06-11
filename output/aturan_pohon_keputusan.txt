@@ -1,0 +1,34 @@
+ATURAN POHON KEPUTUSAN (3 Level Pertama)
+============================================================
+
+|--- nominal_klaim <= 0.21
+|   |--- nominal_klaim <= 0.01
+|   |   |--- kelengkapan_dokumen <= 1.00
+|   |   |   |--- kelengkapan_dokumen <= 0.77
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- kelengkapan_dokumen >  0.77
+|   |   |   |   |--- class: 1
+|   |   |--- kelengkapan_dokumen >  1.00
+|   |   |   |--- riwayat_fraud <= 0.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- riwayat_fraud >  0.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |--- nominal_klaim >  0.01
+|   |   |--- nominal_klaim <= 0.02
+|   |   |   |--- class: 1
+|   |   |--- nominal_klaim >  0.02
+|   |   |   |--- nominal_klaim <= 0.02
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- nominal_klaim >  0.02
+|   |   |   |   |--- truncated branch of depth 2
+|--- nominal_klaim >  0.21
+|   |--- jenis_perjalanan <= 0.50
+|   |   |--- class: 1
+|   |--- jenis_perjalanan >  0.50
+|   |   |--- nominal_klaim <= 0.55
+|   |   |   |--- nominal_klaim <= 0.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- nominal_klaim >  0.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- nominal_klaim >  0.55
+|   |   |   |--- class: 1

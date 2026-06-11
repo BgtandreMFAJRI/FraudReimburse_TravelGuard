@@ -1,0 +1,4 @@
+jenis_perjalanan,nominal_klaim,kelengkapan_dokumen,frekuensi_klaim_bulan,selisih_hari_pengajuan,jabatan_pegawai,riwayat_fraud
+dalam kota,2000000,1.0,1,2,Staff,0
+luar kota,8000000,0.75,2,10,Supervisor,0
+luar negeri,15000000,1.0,1,1,Manager,1
